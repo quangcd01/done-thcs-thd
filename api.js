@@ -1,4 +1,4 @@
-fetch('https://duyquang0407.github.io/done-thcs-thd/products.json')
+fetch('https://quangcd01.github.io/done-thcs-thd/products.json')
   .then(response => response.json())
   .then(data => {
     // console.log(data.products);
