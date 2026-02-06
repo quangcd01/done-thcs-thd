@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin · CRUD Sản phẩm</title>
+
+  <!-- Font + dùng lại CSS admin nếu bạn đã tách -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./admin.css">
+  <link rel="stylesheet" href="./admin-products.css">
+</head>
+
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand"><span class="dot"></span><span>Admin Panel</span></div>
+      <nav class="nav">
+        <a href="admin.html">👤 Quản lý tài khoản</a>
+        <a class="active" href="admin-products.html">📦 Sản phẩm</a>
+        <a href="dashboard.html">📊 Dashboard</a>
+        <a href="index.html">🏠 Trang chủ</a>
+      </nav>
+    </aside>
+
+    <main class="main">
+      <div class="topbar">
+        <div>
+          <h1>CRUD Sản phẩm</h1>
+          <div class="sub">Realtime Database • <span id="lastUpdated">--</span></div>
+        </div>
+        <div class="actions">
+          <div class="input">🔎
+            <input id="searchInput" placeholder="Tìm theo tên / danh mục..." />
+          </div>
+          <button class="btn" id="btnClear">Xoá lọc</button>
+          <button class="btn primary" id="btnReload">Làm mới</button>
+        </div>
+      </div>
+
+      <section class="grid" style="grid-template-columns: repeat(2, minmax(0,1fr));">
+        <div class="card">
+          <div class="label">Tổng sản phẩm</div>
+          <div class="value" id="kpiTotal">0</div>
+        </div>
+        <div class="card">
+          <div class="label">Đang hiển thị</div>
+          <div class="value" id="kpiShown">0</div>
+        </div>
+      </section>
+
+      <!-- Form -->
+      <section class="panel panel-pad" style="margin-top:14px;">
+        <div class="panel-title">Thêm / Sửa sản phẩm</div>
+
+        <input type="hidden" id="productId" />
+
+        <div class="two-col">
+          <div class="field">
+            <label>Tên sản phẩm *</label>
+            <input id="name" placeholder="Ví dụ: Bánh chưng" />
+          </div>
+
+          <div class="field">
+            <label>Giá (VNĐ) *</label>
+            <input id="price" type="number" placeholder="120000" />
+          </div>
+
+          <div class="field">
+            <label>Danh mục</label>
+            <input id="category" placeholder="Ví dụ: Đồ ăn" />
+          </div>
+
+          <div class="field">
+            <label>Tồn kho</label>
+            <input id="stock" type="number" placeholder="10" />
+          </div>
+
+          <div class="field">
+            <label>Trạng thái</label>
+            <select id="status">
+              <option value="active">Đang bán</option>
+              <option value="inactive">Tạm ẩn</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label>Ảnh sản phẩm (chọn từ máy) *</label>
+            <input id="imageFile" type="file" accept="image/*" />
+            <div class="hint">Ảnh sẽ được nén & lưu vào Realtime DB (không dùng Storage).</div>
+          </div>
+        </div>
+
+        <div class="field" style="margin-top:12px;">
+          <label>Xem trước ảnh</label>
+          <img id="imagePreview" class="preview" alt="preview" />
+          <div class="hint" id="imageInfo">Chưa chọn ảnh</div>
+        </div>
+
+        <div class="field" style="margin-top:12px;">
+          <label>Mô tả</label>
+          <textarea id="description" placeholder="Mô tả ngắn..."></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button class="btn" id="btnReset">Reset</button>
+          <button class="btn primary" id="btnSave">Lưu sản phẩm</button>
+        </div>
+      </section>
+
+      <!-- Table -->
+      <section class="panel" style="margin-top:14px;">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:42px;">#</th>
+              <th>Sản phẩm</th>
+              <th>Danh mục</th>
+              <th>Giá</th>
+              <th>Tồn</th>
+              <th>Trạng thái</th>
+              <th style="width:170px;">Thao tác</th>
+            </tr>
+          </thead>
+          <tbody id="productsTbody"></tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <!-- Firebase v8 -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+
+  <!-- init config tách riêng -->
+  <script src="./firebase-init.js"></script>
+
+  <script src="./admin-products.js"></script>
+</body>
+</html>

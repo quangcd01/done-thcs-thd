@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin · Quản lý tài khoản</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./admin.css">
+</head>
+
+<body>
+    <div class="app">
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="brand">
+                <span class="dot"></span>
+                <span>Admin Panel</span>
+            </div>
+
+            <nav class="nav">
+                <a class="active" href="admin.html">👤 Quản lý tài khoản</a>
+                <a href="admin-products.html">📦 Sản phẩm</a>
+                <a href="dashboard.html">📊 Dashboard</a>
+                <a href="index.html">🏠 Trang chủ</a>
+            </nav>
+        </aside>
+
+        <!-- MAIN -->
+        <main class="main">
+            <div class="topbar">
+                <div>
+                    <h1>Quản lý tài khoản</h1>
+                    <div class="sub">Realtime Database • <span id="lastUpdated">--</span></div>
+                </div>
+
+                <div class="actions">
+                    <div class="input">
+                        🔎
+                        <input id="searchInput" placeholder="Tìm theo email / UID..." />
+                    </div>
+
+                    <button class="btn" id="btnClear">Xoá lọc</button>
+                    <button class="btn primary" id="btnReload">Làm mới</button>
+                </div>
+            </div>
+
+            <!-- KPI -->
+            <section class="grid" style="grid-template-columns: repeat(2, minmax(0,1fr));">
+                <div class="card">
+                    <div class="label">Tổng tài khoản</div>
+                    <div class="value" id="kpiTotal">0</div>
+                </div>
+                <div class="card">
+                    <div class="label">Đang hiển thị</div>
+                    <div class="value" id="kpiShown">0</div>
+                </div>
+            </section>
+
+            <!-- TABLE -->
+            <section class="panel" style="margin-top:14px;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width:42px;">#</th>
+                            <th>Email</th>
+                            <th>UID</th>
+                            <th class="muted">Last login</th>
+                        </tr>
+                    </thead>
+
+                    <!-- admin.js sẽ đổ dữ liệu vào đây -->
+                    <tbody id="usersTbody"></tbody>
+                </table>
+
+                <p id="emptyState" class="muted" style="display:none; padding:12px 14px;">
+                    Chưa có tài khoản nào.
+                </p>
+            </section>
+        </main>
+    </div>
+
+    <!-- Firebase v8.6.8 -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
+    <script src="./admin.js"></script>
+</body>
+
+</html>

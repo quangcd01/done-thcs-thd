@@ -1,0 +1,67 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "image": "images/f1.jpg",
+            "title": "Bánh chưng truyền thống",
+            "description": "Bánh chưng gói lá dong xanh, nếp dẻo thơm, nhân đậu xanh bùi và thịt mỡ béo vừa. Hấp chín kỹ, thơm mùi lá, ăn ngon nhất khi chiên giòn hoặc dùng kèm dưa món.",
+            "price": "$20"
+        },
+        {
+            "id": 2,
+            "image": "images/f2.jpg",
+            "title": "Bánh tét nhân đậu xanh – thịt",
+            "description": "Bánh tét cuộn chắc tay, nếp dẻo, nhân đậu xanh mịn thơm quyện thịt mặn mà. Cắt khoanh đẹp, tiện dùng trong mâm cỗ Tết hoặc làm quà biếu.",
+            "price": "$15"
+        },
+        {
+            "id": 3,
+            "image": "images/f3.jpg",
+            "title": "Dưa hành / củ kiệu chua ngọta",
+            "description": "Hành/kiệu muối giòn nhẹ, vị chua ngọt hài hoà, giúp “chống ngấy” cực chuẩn khi ăn bánh chưng, thịt kho. Hương vị truyền thống, càng để càng thấm.",
+            "price": "$17"
+        },
+        {
+            "id": 4,
+            "image": "images/f4.jpg",
+            "title": "Thịt kho trứng (thịt kho tàu)",
+            "description": "Thịt kho mềm rục, trứng thấm đều nước màu cánh gián, vị mặn ngọt vừa miệng. Ăn kèm cơm nóng hoặc dưa hành là “đúng bài” ngày Tết.",
+            "price": "$18"
+        },
+        {
+            "id": 5,
+            "image": "images/f5.jpg",
+            "title": "Giò thủ",
+            "description": "Giò thủ giòn sần sật, thơm mùi tiêu và tai–mũi–thịt hòa quyện, cắt lát lên đĩa là sang mâm ngay. Phù hợp đãi khách, ăn kèm dưa món/dưa hành.",
+            "price": "$10"
+        },
+        {
+            "id": 6,
+            "image": "images/f6.jpg",
+            "title": "Giò lụa (chả lụa)",
+            "description": "Giò lụa dai mềm tự nhiên, thơm mùi thịt và nước mắm chuẩn, ăn kèm bánh chưng hoặc cuốn bánh tráng đều ngon. Món “quốc dân” không thể thiếu trên bàn Tết.",
+            "price": "$15"
+        },
+        {
+            "id": 7,
+            "image": "images/f7.jpg",
+            "title": "Canh khổ qua nhồi thịt",
+            "description": "Canh khổ qua nhồi thịt thanh mát, nước dùng ngọt nhẹ, ăn Tết vừa ngon vừa “giải ngấy”. Món mang ý nghĩa may mắn: khổ qua – năm mới an yên.",
+            "price": "$12"
+        },
+        {
+            "id": 8,
+            "image": "images/f8.jpg",
+            "title": "Mứt tết",
+            "description": "Mứt tết truyền thống, vị ngọt dịu, thơm nồng, là món ăn không thể thiếu trong mâm cỗ Tết. Dùng kèm bánh chưng hoặc bánh tráng là “đúng bài”.",
+            "price": "$14"
+        },
+        {
+            "id": 9,
+            "image": "images/f9.jpg",
+            "title": "Hạt dưa Tết",
+            "description": "Hạt dưa rang thơm, giòn rụm, vừa nhâm nhi vừa trò chuyện ngày Tết. Bày kèm bánh mứt, trà nóng là đúng “vibe” tiếp khách đầu năm.",
+            "price": "$10"
+        }
+    ]
+}

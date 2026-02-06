@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!---Coding By CoderGirl | www.codinglabweb.com--->
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Login & Registration Form | CoderGirl</title>
+  <!---Custom CSS File--->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./ai-fab.css">
+</head>
+
+<body>
+  <div class="container">
+    <input type="checkbox" id="check">
+    <div class="login form">
+      <header>Login</header>
+      <form action="#">
+        <input id="e-Login" type="text" placeholder="Enter your email">
+        <input id="pwd-Login" type="password" placeholder="Enter your password">
+        <a href="#">Forgot password?</a>
+        <input id="btn-Login" type="button" class="button" value="Login">
+      </form>
+      <div class="signup">
+        <span class="signup">Don't have an account?
+          <label for="check">Signup</label>
+        </span>
+      </div>
+    </div>
+    <div class="registration form">
+      <header>Signup</header>
+      <form action="#">
+        <input id="e-Sign" type="text" placeholder="Enter your email">
+        <input id="pwd-Sign" type="password" placeholder="Create a password">
+        <input id="cfPwd-Sign" type="password" placeholder="Confirm your password">
+        <i id="message-error"></i>
+        <input id="btn-Sign" type="button" class="button" value="Signup">
+      </form>
+      <div class="signup">
+        <span class="signup">Already have an account?
+          <label for="check">Login</label>
+        </span>
+      </div>
+    </div>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
+  <script src="main.js"></script>
+  <script src="./ai-fab.js"></script>
+</body>
+
+</html>

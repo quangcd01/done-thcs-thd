@@ -1,0 +1,54 @@
+.ai-fab {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    width: 64px;
+    height: 64px;
+    border-radius: 999px;
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+    z-index: 9999;
+
+    /* Look giống nút play */
+    background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0) 55%),
+        linear-gradient(135deg, #26d7ff, #22c55e);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
+.ai-fab:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 34px rgba(0, 0, 0, 0.42);
+}
+
+.ai-fab:active {
+    transform: translateY(0);
+}
+
+.ai-fab__icon {
+    width: 0;
+    height: 0;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    border-left: 18px solid rgba(255, 255, 255, 0.95);
+    margin-left: 3px;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.35));
+}
+
+@media (max-width: 480px) {
+    .ai-fab {
+        width: 56px;
+        height: 56px;
+        right: 14px;
+        bottom: 14px;
+    }
+
+    .ai-fab__icon {
+        border-top: 11px solid transparent;
+        border-bottom: 11px solid transparent;
+        border-left: 16px solid rgba(255, 255, 255, 0.95);
+    }
+}

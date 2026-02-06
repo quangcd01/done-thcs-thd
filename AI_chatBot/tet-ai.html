@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>AI Hỏi đáp Tết</title>
+    <link rel="stylesheet" href="tet-ai.css" />
+</head>
+
+<body>
+    <div class="wrap">
+        <header class="top">
+            <h1>AI Hỏi đáp về Tết 🎋</h1>
+            <p>Hỏi phong tục, món ăn, lời chúc, lịch hoạt động… (chỉ chủ đề Tết)</p>
+        </header>
+
+        <!-- Option an toàn hơn: người dùng tự dán API key (không hardcode trong code) -->
+        <section class="keybox">
+            <label for="apiKey">Gemini API Key</label>
+            <div class="keyrow">
+                <input id="apiKey" type="password" placeholder="Dán API key vào đây (không lưu server)" />
+                <button id="saveKey" type="button">Lưu tạm</button>
+                <button id="clearKey" type="button">Xoá</button>
+            </div>
+            <small>
+                Lưu ý: gọi API trực tiếp trên web thì key vẫn có thể bị lộ qua Network.
+                Hãy giới hạn key theo HTTP referrer + chỉ bật Generative Language API + đặt quota.
+            </small>
+        </section>
+
+        <main id="chat" class="chat"></main>
+
+        <form id="form" class="composer">
+            <input id="input" type="text" placeholder="Nhập câu hỏi về Tết..." autocomplete="off" />
+            <button id="send" type="submit">Gửi</button>
+        </form>
+
+        <div class="hint">
+            Gợi ý: “Viết lời chúc Tết cho thầy cô”, “Mâm cỗ miền Bắc có gì?”, “Xông đất là gì?”
+        </div>
+    </div>
+
+    <script src="tet-ai.js"></script>
+</body>
+
+</html>

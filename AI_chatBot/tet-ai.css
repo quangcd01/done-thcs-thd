@@ -1,0 +1,165 @@
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    background: #0b1220;
+    color: #e9eefc;
+}
+
+.wrap {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 16px
+}
+
+.top {
+    padding: 14px 16px;
+    background: rgba(255, 255, 255, .06);
+    border: 1px solid rgba(255, 255, 255, .10);
+    border-radius: 12px;
+}
+
+.top h1 {
+    margin: 0 0 6px;
+    font-size: 20px
+}
+
+.top p {
+    margin: 0;
+    opacity: .85
+}
+
+.keybox {
+    margin: 12px 0;
+    padding: 12px;
+    background: rgba(255, 255, 255, .04);
+    border: 1px solid rgba(255, 255, 255, .10);
+    border-radius: 12px;
+}
+
+.keybox label {
+    display: block;
+    margin-bottom: 6px;
+    opacity: .9
+}
+
+.keyrow {
+    display: flex;
+    gap: 10px
+}
+
+#apiKey {
+    flex: 1;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, .14);
+    background: rgba(0, 0, 0, .25);
+    color: #fff;
+    outline: none;
+}
+
+.keybox button {
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 0;
+    cursor: pointer;
+}
+
+#saveKey {
+    background: #22c55e;
+    color: #07110a;
+    font-weight: 600
+}
+
+#clearKey {
+    background: #ef4444;
+    color: #220708;
+    font-weight: 600
+}
+
+.keybox small {
+    display: block;
+    margin-top: 8px;
+    opacity: .7;
+    line-height: 1.35
+}
+
+.chat {
+    margin: 12px 0;
+    padding: 16px;
+    height: calc(100vh - 340px);
+    overflow: auto;
+    background: rgba(255, 255, 255, .04);
+    border: 1px solid rgba(255, 255, 255, .10);
+    border-radius: 12px;
+}
+
+.msg {
+    display: flex;
+    margin: 10px 0
+}
+
+.bubble {
+    max-width: 78%;
+    padding: 10px 12px;
+    border-radius: 12px;
+    line-height: 1.35;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    border: 1px solid rgba(255, 255, 255, .10);
+}
+
+.user {
+    justify-content: flex-end
+}
+
+.user .bubble {
+    background: rgba(99, 102, 241, .22)
+}
+
+.bot .bubble {
+    background: rgba(16, 185, 129, .18)
+}
+
+.composer {
+    display: flex;
+    gap: 10px;
+    padding: 12px;
+    background: rgba(255, 255, 255, .06);
+    border: 1px solid rgba(255, 255, 255, .10);
+    border-radius: 12px;
+}
+
+#input {
+    flex: 1;
+    padding: 12px 12px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, .14);
+    background: rgba(0, 0, 0, .25);
+    color: #fff;
+    outline: none;
+}
+
+#send {
+    padding: 12px 16px;
+    border-radius: 10px;
+    border: 0;
+    background: #22c55e;
+    color: #07110a;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#send:disabled {
+    opacity: .6;
+    cursor: not-allowed
+}
+
+.hint {
+    opacity: .75;
+    font-size: 12.5px;
+    margin-top: 10px
+}
