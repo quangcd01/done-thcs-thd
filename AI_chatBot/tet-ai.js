@@ -8,7 +8,7 @@ const saveKeyBtn = document.getElementById("saveKey");
 const clearKeyBtn = document.getElementById("clearKey");
 
 // Lưu tạm trong sessionStorage (không lưu lâu dài, nhưng vẫn có thể bị lộ qua Network khi gọi API)
-const KEY_STORAGE = "AIzaSyD8gLX3DeeOb5uYcSEFiKu-oEpEEkUigBM";
+const KEY_STORAGE = "AIzaSyA6OUY2BTEq75V1k-CdSqC2AxxC4KJwP2M";
 
 // Lịch sử chat đơn giản (multi-turn)
 const history = []; // {role:'user'|'model', text:'...'}
